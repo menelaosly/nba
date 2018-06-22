@@ -1,0 +1,24 @@
+<!--
+  Generated template for the NewsStandPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>News Stand</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content >
+  <ion-card text-justify text-wrap *ngFor="let n of news" (click)="goToNews(n)">
+      <img src={{n.img}} alt="">
+    <h3>{{n.title}}</h3>
+    <ion-row>
+        {{n.date}}
+    </ion-row>
+  </ion-card>
+</ion-content>

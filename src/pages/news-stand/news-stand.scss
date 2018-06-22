@@ -1,0 +1,23 @@
+page-news-stand {
+
+}
+
+ion-card{
+    border-radius: 5px !important;
+    margin: 20px auto !important;
+    cursor: pointer;
+    img{
+        height: 250px !important;
+        object-fit: cover;
+    }
+    h3{
+        font-weight: bold;
+        margin: 15px;
+        padding:5px;
+    }
+    ion-row{
+        color: rgb(87, 87, 87);
+        padding: 3px; 
+        font-size: 90%;
+    }
+}

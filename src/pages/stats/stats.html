@@ -1,0 +1,49 @@
+<div class="splash" *ngIf="splash">
+
+</div>
+
+
+<ion-header>
+
+  <ion-navbar color="primary">
+      <img class="logo" src="../../assets/imgs/icon.png" alt="">
+    <ion-title >NBA STATS</ion-title>
+    <ion-searchbar class="search" [(ngModel)]="searchInput" [showCancelButton]="true" (ionInput)="filterPlayers($event)" (ionCancel)="onCancel($event)">
+    </ion-searchbar>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-segment margin-vertical [(ngModel)]="category" color="primary" (ionChange)="changeCategory($event)">
+    <ion-segment-button value="PTS">PTS</ion-segment-button>
+    <ion-segment-button value="AST">AST</ion-segment-button>
+    <ion-segment-button value="STL">STL</ion-segment-button>
+    <ion-segment-button value="REB">REB</ion-segment-button>
+    <ion-segment-button value="BLK">BLK</ion-segment-button>
+  </ion-segment>
+
+  <ion-item>
+    <label item-start>Season: 2017-18</label>
+    <h3 item-end>{{ category }}</h3>
+  </ion-item>
+  <ion-scroll scrollY="true" scrollX="false">
+    <ion-item class="player-item" *ngFor="let player of players" ion-item (click)="goToPlayer(player)">
+      <h4 item-start>{{player.rank}}.</h4>
+      <ion-avatar item-start>
+        <img src={{player.img}}>
+      </ion-avatar>
+
+      <h3 text-wrap>{{player.player}}</h3>
+      <img class="teamImg" src={{player.teamImg}} alt="">
+      <h2 item-end *ngIf="category=='PTS'">{{player.pts}}</h2>
+      <h2 item-end *ngIf="category=='REB'">{{player.reb}}</h2>
+      <h2 item-end *ngIf="category=='AST'">{{player.ast}}</h2>
+      <h2 item-end *ngIf="category=='STL'">{{player.stl}}</h2>
+      <h2 item-end *ngIf="category=='BLK'">{{player.blk}}</h2>
+
+    </ion-item>
+
+  </ion-scroll>
+
+</ion-content>

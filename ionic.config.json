@@ -4,5 +4,15 @@
   "type": "ionic-angular",
   "integrations": {
     "cordova": {}
+  },
+  "proxies":[
+    {
+    "path":"/stats",
+    "proxyUrl":"https://stats.nba.com"
+  },
+  {
+    "path":"/news",
+    "proxyUrl":"https://newsapi.org"
   }
+]
 }

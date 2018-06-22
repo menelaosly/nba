@@ -1,0 +1,73 @@
+<!--
+  Generated template for the DetailsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Player Info</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+  <ion-item class="banner">
+    <img class="player-img" src={{player.img}}>
+    <h2 text-wrap>{{player.player}}</h2>
+    <h4>{{player.team}}</h4>
+    <img class="team-logo" src={{player.teamImg}}>
+    <img class="team-logo-sm" src={{player.teamImg}}>
+  </ion-item>
+  <ion-row class="pergame">
+    <ion-col text-center>
+      PPG
+      <h4>{{player.pts}}</h4>
+    </ion-col>
+    <ion-col text-center>
+      APG
+      <h4>{{player.ast}}</h4>
+    </ion-col>
+    <ion-col text-center>
+      RPG
+      <h4>{{player.reb}}</h4>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <h3>Stats Per Season</h3>
+  </ion-row>
+  <ion-scroll class="stats" scrollX="true" scrollY="true">
+    <ion-row class="header" nowrap>
+      <ion-col  *ngFor="let item of headers">
+        {{item}}
+      </ion-col>
+    </ion-row>
+    <ion-row nowrap *ngFor="let season of stats">
+        <ion-col >{{season.season}}</ion-col>
+        <ion-col >{{season.team}}</ion-col>
+        <ion-col >{{season.gp}}</ion-col>
+        <ion-col >{{season.gs}}</ion-col>
+        <ion-col >{{season.min}}</ion-col>
+        <ion-col >{{season.fgm}}</ion-col>
+        <ion-col >{{season.fga}}</ion-col>
+        <ion-col >{{season.fg_per}}</ion-col>
+        <ion-col >{{season.fg3m}}</ion-col>
+        <ion-col >{{season.fg3a}}</ion-col>
+        <ion-col >{{season.fg3_per}}</ion-col>
+        <ion-col >{{season.ftm}}</ion-col>
+        <ion-col >{{season.fta}}</ion-col>
+        <ion-col >{{season.ft_per}}</ion-col>
+        <ion-col >{{season.o_reb}}</ion-col>
+        <ion-col >{{season.d_reb}}</ion-col>
+        <ion-col >{{season.reb}}</ion-col>
+        <ion-col >{{season.ast}}</ion-col>
+        <ion-col >{{season.stl}}</ion-col>
+        <ion-col >{{season.blk}}</ion-col>
+        <ion-col >{{season.tov}}</ion-col>
+        <ion-col >{{season.p_fouls}}</ion-col>
+        <ion-col >{{season.points}}</ion-col>
+      </ion-row>
+  </ion-scroll>
+
+</ion-content>
