@@ -1,0 +1,24 @@
+<!--
+  Generated template for the VideoPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <img class="logo" src="../../assets/imgs/icon.png" alt="">
+    <ion-title>VIDEOS</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-card padding *ngFor="let video of videos" (click)="goToVideo(video)">
+    <img src={{video.img}} alt="">
+    <ion-label text-wrap text-justify>{{video.title}}</ion-label>
+    <p>{{video.date | date}}</p>
+    <ion-icon size="large" name="play"></ion-icon>
+  </ion-card>
+</ion-content>

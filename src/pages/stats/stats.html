@@ -6,9 +6,10 @@
 <ion-header>
 
   <ion-navbar color="primary">
-      <img class="logo" src="../../assets/imgs/icon.png" alt="">
-    <ion-title >NBA STATS</ion-title>
-    <ion-searchbar class="search" [(ngModel)]="searchInput" [showCancelButton]="true" (ionInput)="filterPlayers($event)" (ionCancel)="onCancel($event)">
+    <ion-title>NBA STATS</ion-title>
+      <ion-icon class="search-btn" name="search"  icon-only *ngIf="!isSearch" (click)="isSearch=true"></ion-icon>
+    <ion-searchbar *ngIf="isSearch" class="search" [(ngModel)]="searchInput" [showCancelButton]="true" [cancelButtonText]="Cancel" (ionInput)="filterPlayers($event)"
+      (ionCancel)="onCancel($event)">
     </ion-searchbar>
   </ion-navbar>
 </ion-header>

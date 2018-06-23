@@ -13,6 +13,10 @@
   {
     "path":"/news",
     "proxyUrl":"https://newsapi.org"
+  },
+  {
+    "path":"/youtube",
+    "proxyUrl":"https://www.googleapis.com"
   }
 ]
 }

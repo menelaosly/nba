@@ -2,10 +2,27 @@
     background: color($colors,"primary");
 }
 
+*{
+    box-sizing: border-box;
+}
+
 ::-webkit-scrollbar{
     width: 5px;
 }
 
 ::-webkit-scrollbar-track{
     width: 5px;
+}
+
+ion-title{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: 20px;
+}
+
+.logo{
+    width: 70px;
+    height: 60px;
+    float: left;
 }

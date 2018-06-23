@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
+import { Video } from '../../model/Video';
 
 /**
- * Generated class for the NewsPage page.
+ * Generated class for the VideoPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -11,13 +11,13 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-news',
-  templateUrl: 'news.html',
+  selector: 'page-video',
+  templateUrl: 'video.html',
 })
-export class NewsPage {
-  news:any;
+export class VideoPage {
+  video:Video;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-    this.news=this.navParams.get("news");
+    this.video=navParams.get("video");
   }
 
   ionViewDidLoad() {

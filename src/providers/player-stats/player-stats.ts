@@ -10,7 +10,7 @@ export class PlayerStatsProvider {
   }
 
   getStats(id){
-    return this.http.get('/stats/stats/playercareerstats/?PerMode=PerGame&PlayerID='+id)
+    return this.http.get('https://stats.nba.com/stats/playercareerstats/?PerMode=PerGame&PlayerID='+id)
     .map(data=>data.json());
   }
 }

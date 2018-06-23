@@ -15,6 +15,9 @@ import { TeamProvider } from '../providers/team/team';
 import { PlayerStatsProvider } from '../providers/player-stats/player-stats';
 import { DetailsPage } from '../pages/details/details';
 import { StatsPage } from '../pages/stats/stats';
+import { YoutubeProvider } from '../providers/youtube/youtube';
+import { VideoPage } from '../pages/video/video';
+import { VideosPage } from '../pages/videos/videos';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,9 @@ import { StatsPage } from '../pages/stats/stats';
     DetailsPage,
     StatsPage,
     NewsStandPage,
-    NewsPage
+    NewsPage,
+    VideosPage,
+    VideoPage
   ],
   imports: [
     BrowserModule,
@@ -38,6 +43,8 @@ import { StatsPage } from '../pages/stats/stats';
     StatsPage,
     NewsPage,
     NewsStandPage,
+    VideosPage,
+    VideoPage
   ],
   providers: [
     StatusBar,
@@ -46,7 +53,8 @@ import { StatsPage } from '../pages/stats/stats';
     LeaderProvider,
     TeamProvider,
     PlayerStatsProvider,
-    NewsProvider
+    NewsProvider,
+    YoutubeProvider
   ]
 })
 export class AppModule {}

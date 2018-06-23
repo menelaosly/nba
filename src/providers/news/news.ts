@@ -16,7 +16,7 @@ export class NewsProvider {
   }
 
   getNews(){
-    return this.http.get('/news/v2/top-headlines?sources=bleacher-report&apiKey=a5cad0ec257d4fd996c38eecf90588fa')
+    return this.http.get('https://newsapi.org/v2/top-headlines?sources=bleacher-report&apiKey=a5cad0ec257d4fd996c38eecf90588fa')
         .map(data=>data.json());
   }
 

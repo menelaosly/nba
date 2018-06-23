@@ -30,6 +30,7 @@ export class StatsPage {
   playersJson: any;
   searchInput: any;
   splash:boolean=true;
+  isSearch=false;
   constructor(private teamProvider: TeamProvider, private leaderProvider: LeaderProvider, private navCtrl: NavController) {
     this.category = 'PTS';
     this.teams = new Map();
@@ -103,6 +104,7 @@ export class StatsPage {
 
   onCancel(event) {
     this.getLeaders(this.category);
+    this.isSearch=false;
   }
 
 

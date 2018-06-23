@@ -1,0 +1,17 @@
+page-video {
+    ion-card{
+        position: relative;
+        ion-icon{
+            background: white;
+            border-radius: 50%;
+            position: absolute;
+            top: 35%;
+            left: 45%;
+            padding: 5px 10px;
+            text-align: center;
+        }
+        ion-label{
+            font-weight: bold;
+        }
+    }
+}
